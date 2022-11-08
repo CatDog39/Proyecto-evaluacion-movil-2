@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     EditText jetcantidad;
-    TextView jtvfinca,jtvsobrecosto,jtvtransporte,jtvtotal;
+    TextView jtvfinca,jtvsobrecosto, jtvtotal;
     RadioButton jrbfinca_economica,jrbfinca_normal,jrbfinca_premium;
     CheckBox jcbtransporte;
 
@@ -102,17 +102,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void Limpiar(View view){
+    public void LimpiarDatos(View view){
+        //System.out.println("El codigo pasa por aqui");
         jrbfinca_economica.setChecked(true);
         jcbtransporte.setChecked(false);
+
         jtvsobrecosto.setText("0");
         jtvfinca.setText("680000");
-        jtvtransporte.setText("0");
+        // Error jtvtransporte se elimino al final
         jtvtotal.setText("0");
         jetcantidad.setText("");
         jetcantidad.requestFocus();
-
-
     }
 
 }
